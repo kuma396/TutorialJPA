@@ -60,6 +60,7 @@ public class CountryController {
     // ----- 削除 -----
     @PostMapping("/delete")
     public String deleteCountry(@RequestParam("code") String code, Model model) {
+        System.out.println("code確認:" + code);
         // 削除
         service.deleteCountry(code);
 
